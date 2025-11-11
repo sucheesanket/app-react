@@ -13,8 +13,7 @@ const App = () => {
     copyTask.push({title,details})
     setTask(copyTask)
     console.log(task);
-    
-    
+   
   }
   
   const deleteNote=(idx)=>{
@@ -52,17 +51,17 @@ const App = () => {
         {task.map(function(elem,idx){
           return  <div key={idx}className="h-60 w-48 bg-white flex flex-col items-center justify-between text-black p-6 bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpics.clipartpng.com%2FSticky_Note_PNG_Clip_Art-2367.png&f=1&nofb=1&ipt=d69de4c94c423eabdcc911a4352bca4a4df4d08487c999eb8ba3cb6102454020)] bg-cover bg-center rounded-xl">
             <div className=''>
-              <h3 className='leading-snug font-semibold'>{elem.title}</h3>
-            <p className='font-light leading-snug mt-3 text-gray-500'>{elem.details}</p>
+              <h3
+               className='leading-snug font-semibold'>{elem.title}</h3>
+            <p
+             className='font-light leading-snug mt-3 text-gray-500'>{elem.details}</p>
             </div>
             <h6 onClick={()=>{
               deleteNote(idx)
-            }} className= ' bg-red-500 rounded-xl px-7 cursor-pointer text-white'>Delete</h6>
+            }}
+             className= ' bg-red-500 rounded-xl px-7 cursor-pointer text-white'>Delete</h6>
           </div>
-          
-          
-          
-
+         
         })}
         
         </div>
